@@ -1,0 +1,435 @@
+// 导图
+digraph {
+	node [fontname=FANGSONG]
+	edge [arrowhead=empty splines=spline style=dashed]
+	"例子" -> "int (*p)[10] = &arr;" [fontname="Microsoft YaHei"]
+	"例子" -> "char ch;" [fontname="Microsoft YaHei"]
+	"例子" -> "int *p[10]" [fontname="Microsoft YaHei"]
+	"例子" -> "int (*p)[10]" [fontname="Microsoft YaHei"]
+	"例子" -> "\"abac\"<\"abaec\"
+\"abafg\"<\"abc\"" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "ASCII码文件" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "节省外存空间和转换时间" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "一个字节不对应一个字符，
+不能直接输出对应的字符形式" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "把整个数字作为一个二进制数来存储，
+并非数值的每一位数字都占用单独的存储空间" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "优点" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "缺点" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "特点" [fontname="Microsoft YaHei"]
+	"二进制文件" -> "别称" [fontname="Microsoft YaHei"]
+	"存储结构" -> "字符串是数据元素为单个字符的线性表" [fontname="Microsoft YaHei"]
+	"存储结构" -> "3种表示串的长度的方法" [fontname="Microsoft YaHei"]
+	"选择控制结构" -> "单分支选择结构" [fontname="Microsoft YaHei"]
+	"选择控制结构" -> "双分支选择结构" [fontname="Microsoft YaHei"]
+	"选择控制结构" -> "多分支选择结构" [fontname="Microsoft YaHei"]
+	"指针数组是数组，
+是一个存放指针的数组" -> "例子" [fontname="Microsoft YaHei"]
+	"指针数组是数组，
+是一个存放指针的数组" -> "int *p[10]" [fontname="Microsoft YaHei"]
+	"模式匹配" -> "KMP算法" [fontname="Microsoft YaHei"]
+	"模式匹配" -> "BF算法" [fontname="Microsoft YaHei"]
+	"模式匹配" -> "定义" [fontname="Microsoft YaHei"]
+	"补充" -> "求余运算还有什么用？" [fontname="Microsoft YaHei"]
+	"补充" -> "用%c输入数据存在的问题" [fontname="Microsoft YaHei"]
+	"补充" -> "如何分隔多个输入数据？" [fontname="Microsoft YaHei"]
+	"赋值表达式" -> "复合的赋值——一种简写的且执行效率更高的赋值" [fontname="Microsoft YaHei"]
+	"赋值表达式" -> "多重赋值" [fontname="Microsoft YaHei"]
+	"赋值表达式" -> "简单赋值" [fontname="Microsoft YaHei"]
+	"整型" -> "短整型" [fontname="Microsoft YaHei"]
+	"整型" -> "长整型" [fontname="Microsoft YaHei"]
+	"整型" -> "无符号整型" [fontname="Microsoft YaHei"]
+	"整型" -> "基本整型" [fontname="Microsoft YaHei"]
+	"当算术表达式包含多个运算符时，
+如何确定运算顺序？" -> "算术表达式的结合性" [fontname="Microsoft YaHei"]
+	"当算术表达式包含多个运算符时，
+如何确定运算顺序？" -> "算术表达式的优先级" [fontname="Microsoft YaHei"]
+	"数组名代表数组第一个元素的地址，
+因此用数组名作函数实参实际上是将
+数组的首地址传给被调函数。" -> "数组作函数形参时，数组的长度可
+以不出现在数组名后面的方括号内，
+通常用另一个整型形参来指定数组的长度。" [fontname="Microsoft YaHei"]
+	"数组名代表数组第一个元素的地址，
+因此用数组名作函数实参实际上是将
+数组的首地址传给被调函数。" -> "注意！" [fontname="Microsoft YaHei"]
+	"求余运算还有什么用？" -> "对p求模取余：H(k)=k%p" [fontname="Microsoft YaHei"]
+	"求余运算还有什么用？" -> "判断某数能被另一个数整除" [fontname="Microsoft YaHei"]
+	"求余运算还有什么用？" -> "随机函数rand（）" [fontname="Microsoft YaHei"]
+	"求余运算还有什么用？" -> "如何生成一个指定范围（如1～100）内的随机数？" [fontname="Microsoft YaHei"]
+	"文本文件" -> "一般占用的存储空间较大，
+需花费ASCII码与字符间的转换时间" [fontname="Microsoft YaHei"]
+	"文本文件" -> "可以很方便地被其他程序读取，
+便于对字符进行逐个处理，
+便于输出字符" [fontname="Microsoft YaHei"]
+	"文本文件" -> "优点 " [fontname="Microsoft YaHei"]
+	"文本文件" -> "每一位数字都单独占用
+一个字节的存储空间" [fontname="Microsoft YaHei"]
+	"文本文件" -> "缺点" [fontname="Microsoft YaHei"]
+	"文本文件" -> "特点" [fontname="Microsoft YaHei"]
+	"若要把一个数组传递给一个函数，
+那么只要使用不带方括号的数组名
+作为函数实参调用函数即可。" -> "仅仅是数组名，
+不带方括号和下标。" [fontname="Microsoft YaHei"]
+	"若要把一个数组传递给一个函数，
+那么只要使用不带方括号的数组名
+作为函数实参调用函数即可。" -> "注意！" [fontname="Microsoft YaHei"]
+	"赋值运算" -> "赋值表达式" [fontname="Microsoft YaHei"]
+	"赋值运算" -> "赋值运算符" [fontname="Microsoft YaHei"]
+	"赋值运算" -> "如何给变量赋值" [fontname="Microsoft YaHei"]
+	"赋值运算" -> "变量的定义" [fontname="Microsoft YaHei"]
+	"结构体变量引用" -> "结构体变量名.成员名" [fontname="Microsoft YaHei"]
+	"（3）" -> "省略结构体名，
+直接定义结构体变量" [fontname="Microsoft YaHei"]
+	"结构体类型定义" -> "struct student
+{
+    int id;
+    char name[20];
+    char sex[6];
+    int age;
+};" [fontname="Microsoft YaHei"]
+	"结构体类型定义" -> "代码示例" [fontname="Microsoft YaHei"]
+	"在定义结构体类型的同时，
+定义结构体变量" -> "代码示例" [fontname="Microsoft YaHei"]
+	"在定义结构体类型的同时，
+定义结构体变量" -> "struct student
+{
+    ......
+}stu1,stu2;" [fontname="Microsoft YaHei"]
+	"顺序结构" -> "基本操作" [fontname="Microsoft YaHei"]
+	"顺序结构" -> "特点" [fontname="Microsoft YaHei"]
+	"顺序结构" -> "自上而下，依次按顺序执行" [fontname="Microsoft YaHei"]
+	"一维数组在内存中占用的字节数为：
+数组长度*sizeof（基类型）
+二维数组占用的字节数为：
+第一维长度*第二维长度*sizeof（基类型）" -> "1.在不同编译系统中，int型所占的字节数是不同的。
+  因此,用sizeof运算符来计算一个类型或者变量在
+  内存中所占的字节数有利于提高程序的可移植性。
+2.数组第二维的长度声明永远都不能省略。" [fontname="Microsoft YaHei"]
+	"一维数组的定义和初始化" -> "类型  数组名[元素个数];" [fontname="Microsoft YaHei"]
+	"一维数组的定义和初始化" -> "一般定义格式" [fontname="Microsoft YaHei"]
+	"一维数组的定义和初始化" -> "注意！" [fontname="Microsoft YaHei"]
+	"一维数组的定义和初始化" -> "数组是一组具有相同类型的变量的集合，
+是一种顺序存储、随机访问的顺序表结构。
+构成数组的每个数据项称为数组元素。
+C程序通过数组的下标实现对数组元素的访问。
+数组的基类型，即数组中元素的类型。
+下标的个数表明数组的维数。" [fontname="Microsoft YaHei"]
+	"用%c输入数据存在的问题" -> "C格式符的问题及解决" [fontname="Microsoft YaHei"]
+	"赋值运算符" -> "赋值运算符和数学中的等号有何区别？" [fontname="Microsoft YaHei"]
+	"流程的转移控制" -> "continue语句" [fontname="Microsoft YaHei"]
+	"流程的转移控制" -> "break语句" [fontname="Microsoft YaHei"]
+	"流程的转移控制" -> "goto语句" [fontname="Microsoft YaHei"]
+	"流程的转移控制" -> "穷举法" [fontname="Microsoft YaHei"]
+	"要么执行一个操作，
+要么跳过它" -> "if 语句" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "补充" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "当算术表达式包含多个运算符时，
+如何确定运算顺序？" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "求余运算还有什么用？" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "除法" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "运算顺序" [fontname="Microsoft YaHei"]
+	"算术表达式" -> "求余" [fontname="Microsoft YaHei"]
+	"（2）" -> "在定义结构体类型的同时，
+定义结构体变量" [fontname="Microsoft YaHei"]
+	"定义一个字符型变量" -> "例子" [fontname="Microsoft YaHei"]
+	"定义一个字符型变量" -> "char ch;" [fontname="Microsoft YaHei"]
+	"如何分隔多个输入数据？" -> "空格，Tab或回车" [fontname="Microsoft YaHei"]
+	"如何分隔多个输入数据？" -> "遇非法字符" [fontname="Microsoft YaHei"]
+	"如何分隔多个输入数据？" -> "达到输入位宽" [fontname="Microsoft YaHei"]
+	"赋值运算符和数学中的等号有何区别？" -> "左值和右值类型应一致" [fontname="Microsoft YaHei"]
+	"赋值运算符和数学中的等号有何区别？" -> "有方向性" [fontname="Microsoft YaHei"]
+	"二维数组的定义和初始化" -> "一维数组在内存中占用的字节数为：
+数组长度*sizeof（基类型）
+二维数组占用的字节数为：
+第一维长度*第二维长度*sizeof（基类型）" [fontname="Microsoft YaHei"]
+	"二维数组的定义和初始化" -> "一般定义格式" [fontname="Microsoft YaHei"]
+	"二维数组的定义和初始化" -> "注意！" [fontname="Microsoft YaHei"]
+	"二维数组的定义和初始化" -> "类型  数组名[第一维长度][第二维长度];" [fontname="Microsoft YaHei"]
+	"基本数据类型" -> "指针类型" [fontname="Microsoft YaHei"]
+	"基本数据类型" -> "基本类型" [fontname="Microsoft YaHei"]
+	"基本数据类型" -> "构造类型" [fontname="Microsoft YaHei"]
+	"基本数据类型" -> "空类型" [fontname="Microsoft YaHei"]
+	"代码示例" -> "struct student
+{
+    int id;
+    char name[20];
+    char sex[6];
+    int age;
+};" [fontname="Microsoft YaHei"]
+	"代码示例" -> "struct
+{
+    ......
+}stu1,stu2;" [fontname="Microsoft YaHei"]
+	"代码示例" -> "struct student
+{
+    ......
+};
+struct student stu1,stu2;" [fontname="Microsoft YaHei"]
+	"代码示例" -> "struct student
+{
+    ......
+}stu1,stu2;" [fontname="Microsoft YaHei"]
+	"KMP算法" -> "BF算法升级版" [fontname="Microsoft YaHei"]
+	"字符在内存中是如何存储的？" -> "对应的ASCII码的二进制值" [fontname="Microsoft YaHei"]
+	"除法" -> "整数除法" [fontname="Microsoft YaHei"]
+	"除法" -> "浮点数除法" [fontname="Microsoft YaHei"]
+	"输入" -> "键盘，文件" [fontname="Microsoft YaHei"]
+	"法2" -> "在%c前加一个空格" [fontname="Microsoft YaHei"]
+	"分类" -> "根据运算性质" [fontname="Microsoft YaHei"]
+	"分类" -> "根据运算所需的对象" [fontname="Microsoft YaHei"]
+	"基本类型" -> "枚举类型" [fontname="Microsoft YaHei"]
+	"基本类型" -> "整型" [fontname="Microsoft YaHei"]
+	"基本类型" -> "字符型" [fontname="Microsoft YaHei"]
+	"基本类型" -> "实型（浮点型）" [fontname="Microsoft YaHei"]
+	"输出" -> "屏幕，文件" [fontname="Microsoft YaHei"]
+	"如何给变量赋值" -> "赋值表达式语句" [fontname="Microsoft YaHei"]
+	"如何给变量赋值" -> "定义变量的同时为变量赋值——初始化" [fontname="Microsoft YaHei"]
+	"优点 " -> "可以很方便地被其他程序读取，
+便于对字符进行逐个处理，
+便于输出字符" [fontname="Microsoft YaHei"]
+	"向函数传递一维数组" -> "数组名代表数组第一个元素的地址，
+因此用数组名作函数实参实际上是将
+数组的首地址传给被调函数。" [fontname="Microsoft YaHei"]
+	"向函数传递一维数组" -> "若要把一个数组传递给一个函数，
+那么只要使用不带方括号的数组名
+作为函数实参调用函数即可。" [fontname="Microsoft YaHei"]
+	"一般定义格式" -> "类型  数组名[元素个数];" [fontname="Microsoft YaHei"]
+	"一般定义格式" -> "类型  数组名[第一维长度][第二维长度];" [fontname="Microsoft YaHei"]
+	"先定义结构体类型，
+再定义结构体变量" -> "代码示例" [fontname="Microsoft YaHei"]
+	"先定义结构体类型，
+再定义结构体变量" -> "struct student
+{
+    ......
+};
+struct student stu1,stu2;" [fontname="Microsoft YaHei"]
+	"基本运算" -> "赋值运算" [fontname="Microsoft YaHei"]
+	"基本运算" -> "算术表达式" [fontname="Microsoft YaHei"]
+	"基本运算" -> "分类" [fontname="Microsoft YaHei"]
+	"字符串的比较" -> "例子" [fontname="Microsoft YaHei"]
+	"字符串的比较" -> "\"abac\"<\"abaec\"
+\"abafg\"<\"abc\"" [fontname="Microsoft YaHei"]
+	"循环控制语句" -> "do-while语句" [fontname="Microsoft YaHei"]
+	"循环控制语句" -> "while语句" [fontname="Microsoft YaHei"]
+	"循环控制语句" -> "for语句" [fontname="Microsoft YaHei"]
+	"逻辑结构" -> "字符串的比较" [fontname="Microsoft YaHei"]
+	"逻辑结构" -> "定义" [fontname="Microsoft YaHei"]
+	"单分支选择结构" -> "要么执行一个操作，
+要么跳过它" [fontname="Microsoft YaHei"]
+	"双分支选择结构" -> "在两个不同的操作中，
+选择其中的一个来执行" [fontname="Microsoft YaHei"]
+	"C语言" -> "选择控制结构" [fontname="Microsoft YaHei"]
+	"C语言" -> "基本数据类型" [fontname="Microsoft YaHei"]
+	"C语言" -> "基本运算" [fontname="Microsoft YaHei"]
+	"C语言" -> "字符串" [fontname="Microsoft YaHei"]
+	"C语言" -> "循环控制结构" [fontname="Microsoft YaHei"]
+	"C语言" -> "结构体" [fontname="Microsoft YaHei"]
+	"C语言" -> "数组" [fontname="Microsoft YaHei"]
+	"C语言" -> "文件操作" [fontname="Microsoft YaHei"]
+	"C语言" -> "C语言的输入输出" [fontname="Microsoft YaHei"]
+	"C语言" -> "指针" [fontname="Microsoft YaHei"]
+	"字符串" -> "存储结构" [fontname="Microsoft YaHei"]
+	"字符串" -> "模式匹配" [fontname="Microsoft YaHei"]
+	"字符串" -> "逻辑结构" [fontname="Microsoft YaHei"]
+	"字符串是数据元素为单个字符的线性表" -> "一般采用顺序存储" [fontname="Microsoft YaHei"]
+	"构造类型" -> "结构体类型" [fontname="Microsoft YaHei"]
+	"构造类型" -> "共用体类型" [fontname="Microsoft YaHei"]
+	"构造类型" -> "数组类型" [fontname="Microsoft YaHei"]
+	"运算顺序" -> "当算术表达式包含多个运算符时，
+如何确定运算顺序？" [fontname="Microsoft YaHei"]
+	"结构体变量初始化" -> "结构体变量定义时
+用大括号进行整体赋值" [fontname="Microsoft YaHei"]
+	"两种以上选择
+（需连续执行多个条件判断）" -> "if（表达式1）
+{
+语句A
+}
+else if（表达式2）
+{
+语句B
+}
+else if（表达式3）
+{
+语句C
+}
+else
+{
+语句D
+}" [fontname="Microsoft YaHei"]
+	"输入数据的格式控制" -> "补充" [fontname="Microsoft YaHei"]
+	"输入数据的格式控制" -> "scanf（格式控制字符串，输入地址表）;
+scanf(\"%d%f\",&a,&b);" [fontname="Microsoft YaHei"]
+	"输入数据的格式控制" -> "如何分隔多个输入数据？" [fontname="Microsoft YaHei"]
+	"数组名不能做左值(不能被整体赋值)" -> "& (数组名)，表示整个数组" [fontname="Microsoft YaHei"]
+	"数组名不能做左值(不能被整体赋值)" -> "sizeof (数组名)，表示整个数组" [fontname="Microsoft YaHei"]
+	"单个字符的输入输出" -> "字符在内存中是如何存储的？" [fontname="Microsoft YaHei"]
+	"单个字符的输入输出" -> "字符型变量" [fontname="Microsoft YaHei"]
+	"单个字符的输入输出" -> "字符常量" [fontname="Microsoft YaHei"]
+	"C语言如何实现数据的输入与输出？" -> "输入" [fontname="Microsoft YaHei"]
+	"C语言如何实现数据的输入与输出？" -> "输出" [fontname="Microsoft YaHei"]
+	"C语言如何实现数据的输入与输出？" -> "屏幕，文件" [fontname="Microsoft YaHei"]
+	"C语言如何实现数据的输入与输出？" -> "键盘，文件" [fontname="Microsoft YaHei"]
+	"字符型变量" -> "定义一个字符型变量" [fontname="Microsoft YaHei"]
+	"字符型变量" -> "字符型变量的值" [fontname="Microsoft YaHei"]
+	"C格式符的问题及解决" -> "法2" [fontname="Microsoft YaHei"]
+	"C格式符的问题及解决" -> "在%c前加一个空格" [fontname="Microsoft YaHei"]
+	"C格式符的问题及解决" -> "法1" [fontname="Microsoft YaHei"]
+	"C格式符的问题及解决" -> "将缓冲区中的回车符读入，避免
+被后面的变量作为有效字符读入" [fontname="Microsoft YaHei"]
+	"3种表示串的长度的方法" -> "终结符表示法" [fontname="Microsoft YaHei"]
+	"3种表示串的长度的方法" -> "数组0号表示法" [fontname="Microsoft YaHei"]
+	"3种表示串的长度的方法" -> "变量表示法" [fontname="Microsoft YaHei"]
+	"数据的格式化屏幕输出" -> "顺序结构" [fontname="Microsoft YaHei"]
+	"数据的格式化屏幕输出" -> "printf()的格式修饰符" [fontname="Microsoft YaHei"]
+	"数据的格式化屏幕输出" -> "C语言如何实现数据的输入与输出？" [fontname="Microsoft YaHei"]
+	"数据的格式化屏幕输出" -> "printf()的格式字符" [fontname="Microsoft YaHei"]
+	"数组地址的存储" -> "例子" [fontname="Microsoft YaHei"]
+	"数组地址的存储" -> "int (*p)[10] = &arr;" [fontname="Microsoft YaHei"]
+	"数组地址的存储" -> "用数组指针来存放数组的地址" [fontname="Microsoft YaHei"]
+	"循环控制结构" -> "流程的转移控制" [fontname="Microsoft YaHei"]
+	"循环控制结构" -> "循环控制语句" [fontname="Microsoft YaHei"]
+	"循环控制结构" -> "嵌套循环" [fontname="Microsoft YaHei"]
+	"指针和数组" -> "数组名不能做左值(不能被整体赋值)" [fontname="Microsoft YaHei"]
+	"指针和数组" -> "指针和数组没有关系！(类型不同)" [fontname="Microsoft YaHei"]
+	"注意！" -> "1.在不同编译系统中，int型所占的字节数是不同的。
+  因此,用sizeof运算符来计算一个类型或者变量在
+  内存中所占的字节数有利于提高程序的可移植性。
+2.数组第二维的长度声明永远都不能省略。" [fontname="Microsoft YaHei"]
+	"注意！" -> "数组作函数形参时，数组的长度可
+以不出现在数组名后面的方括号内，
+通常用另一个整型形参来指定数组的长度。" [fontname="Microsoft YaHei"]
+	"注意！" -> "结构体变量的存储空间：
+一般是成员变量的空间和
+可以使用sizeof(struct student)
+获得结构体所占空间的大小" [fontname="Microsoft YaHei"]
+	"注意！" -> "1.C语言中数组的下标都是从0开始的。
+ 2.在定义数组时不能使用变量定义数组的大小。" [fontname="Microsoft YaHei"]
+	"注意！" -> "当形参被声明为二维数组时，
+可以省略数组第一维的长度声明，
+但不能省略数组第二维的长度声明。" [fontname="Microsoft YaHei"]
+	"注意！" -> "仅仅是数组名，
+不带方括号和下标。" [fontname="Microsoft YaHei"]
+	"法1" -> "将缓冲区中的回车符读入，避免
+被后面的变量作为有效字符读入" [fontname="Microsoft YaHei"]
+	"在两个不同的操作中，
+选择其中的一个来执行" -> "if（表达式P）
+语句A
+else
+语句B" [fontname="Microsoft YaHei"]
+	"优点" -> "节省外存空间和转换时间" [fontname="Microsoft YaHei"]
+	"基本操作" -> "输入数据" [fontname="Microsoft YaHei"]
+	"基本操作" -> "整理数据" [fontname="Microsoft YaHei"]
+	"基本操作" -> "输出数据" [fontname="Microsoft YaHei"]
+	"结构体" -> "结构体变量引用" [fontname="Microsoft YaHei"]
+	"结构体" -> "结构体类型定义" [fontname="Microsoft YaHei"]
+	"结构体" -> "结构体变量初始化" [fontname="Microsoft YaHei"]
+	"结构体" -> "结构体数组" [fontname="Microsoft YaHei"]
+	"结构体" -> "结构体变量定义" [fontname="Microsoft YaHei"]
+	"结构体数组" -> "结构体数组名[下标].变量名" [fontname="Microsoft YaHei"]
+	"结构体数组" -> "引用时注意！" [fontname="Microsoft YaHei"]
+	"变量的定义" -> "未被初始化的变量的值是什么？" [fontname="Microsoft YaHei"]
+	"变量的定义" -> "声明变量的名字和类型" [fontname="Microsoft YaHei"]
+	"数组是一组具有相同类型的变量的集合，
+是一种顺序存储、随机访问的顺序表结构。
+构成数组的每个数据项称为数组元素。
+C程序通过数组的下标实现对数组元素的访问。
+数组的基类型，即数组中元素的类型。
+下标的个数表明数组的维数。" -> "1.C语言中数组的下标都是从0开始的。
+ 2.在定义数组时不能使用变量定义数组的大小。" [fontname="Microsoft YaHei"]
+	"BF算法" -> "重复回溯，操作量大" [fontname="Microsoft YaHei"]
+	"BF算法" -> "缺点" [fontname="Microsoft YaHei"]
+	"指针数组和数组指针" -> "指针数组是数组，
+是一个存放指针的数组" [fontname="Microsoft YaHei"]
+	"指针数组和数组指针" -> "数组地址的存储" [fontname="Microsoft YaHei"]
+	"指针数组和数组指针" -> "数组指针是指针" [fontname="Microsoft YaHei"]
+	"（1）" -> "先定义结构体类型，
+再定义结构体变量" [fontname="Microsoft YaHei"]
+	"数组" -> "一维数组的定义和初始化" [fontname="Microsoft YaHei"]
+	"数组" -> "二维数组的定义和初始化" [fontname="Microsoft YaHei"]
+	"数组" -> "向函数传递一维数组" [fontname="Microsoft YaHei"]
+	"数组" -> "向函数传递二维数组" [fontname="Microsoft YaHei"]
+	"if 语句" -> "if（表达式P） 
+语句A" [fontname="Microsoft YaHei"]
+	"字符型变量的值" -> "ASCII码值，
+普通整数，
+可做算术运算" [fontname="Microsoft YaHei"]
+	"多分支选择结构" -> "两种以上选择
+（需连续执行多个条件判断）" [fontname="Microsoft YaHei"]
+	"向函数传递二维数组" -> "当形参被声明为二维数组时，
+可以省略数组第一维的长度声明，
+但不能省略数组第二维的长度声明。" [fontname="Microsoft YaHei"]
+	"向函数传递二维数组" -> "注意！" [fontname="Microsoft YaHei"]
+	"根据运算性质" -> "赋值运算符" [fontname="Microsoft YaHei"]
+	"根据运算性质" -> "……" [fontname="Microsoft YaHei"]
+	"根据运算性质" -> "逻辑运算符" [fontname="Microsoft YaHei"]
+	"根据运算性质" -> "算数运算符" [fontname="Microsoft YaHei"]
+	"根据运算性质" -> "关系运算符" [fontname="Microsoft YaHei"]
+	"缺点" -> "一个字节不对应一个字符，
+不能直接输出对应的字符形式" [fontname="Microsoft YaHei"]
+	"缺点" -> "一般占用的存储空间较大，
+需花费ASCII码与字符间的转换时间" [fontname="Microsoft YaHei"]
+	"缺点" -> "重复回溯，操作量大" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "（3）" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "在定义结构体类型的同时，
+定义结构体变量" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "（2）" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "结构体变量的存储空间：
+一般是成员变量的空间和
+可以使用sizeof(struct student)
+获得结构体所占空间的大小" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "先定义结构体类型，
+再定义结构体变量" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "注意！" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "（1）" [fontname="Microsoft YaHei"]
+	"结构体变量定义" -> "省略结构体名，
+直接定义结构体变量" [fontname="Microsoft YaHei"]
+	"文件操作" -> "二进制文件" [fontname="Microsoft YaHei"]
+	"文件操作" -> "文本文件" [fontname="Microsoft YaHei"]
+	"实型（浮点型）" -> "双精度整型" [fontname="Microsoft YaHei"]
+	"实型（浮点型）" -> "长双精度整型" [fontname="Microsoft YaHei"]
+	"实型（浮点型）" -> "单精度整型" [fontname="Microsoft YaHei"]
+	"特点" -> "把整个数字作为一个二进制数来存储，
+并非数值的每一位数字都占用单独的存储空间" [fontname="Microsoft YaHei"]
+	"特点" -> "每一位数字都单独占用
+一个字节的存储空间" [fontname="Microsoft YaHei"]
+	"特点" -> "自上而下，依次按顺序执行" [fontname="Microsoft YaHei"]
+	"引用时注意！" -> "结构体数组名[下标].变量名" [fontname="Microsoft YaHei"]
+	"数组指针是指针" -> "例子" [fontname="Microsoft YaHei"]
+	"数组指针是指针" -> "int (*p)[10]" [fontname="Microsoft YaHei"]
+	"省略结构体名，
+直接定义结构体变量" -> "代码示例" [fontname="Microsoft YaHei"]
+	"省略结构体名，
+直接定义结构体变量" -> "struct
+{
+    ......
+}stu1,stu2;" [fontname="Microsoft YaHei"]
+	"定义" -> "字符常量是用单括号括起来的一个字符" [fontname="Microsoft YaHei"]
+	"定义" -> "是零个或多个字符组成的有限序列" [fontname="Microsoft YaHei"]
+	"定义" -> "包含子串的串称为主串" [fontname="Microsoft YaHei"]
+	"定义" -> "只包含空格的串称为空格串" [fontname="Microsoft YaHei"]
+	"定义" -> "字符串中任意个连续的字符
+组成的子序列称为该串的子串" [fontname="Microsoft YaHei"]
+	"定义" -> "在主串中寻找子串的过程，
+其中子串称为模式" [fontname="Microsoft YaHei"]
+	"字符常量" -> "字符常量是用单括号括起来的一个字符" [fontname="Microsoft YaHei"]
+	"字符常量" -> "定义" [fontname="Microsoft YaHei"]
+	"C语言的输入输出" -> "补充" [fontname="Microsoft YaHei"]
+	"C语言的输入输出" -> "用%c输入数据存在的问题" [fontname="Microsoft YaHei"]
+	"C语言的输入输出" -> "单个字符的输入输出" [fontname="Microsoft YaHei"]
+	"C语言的输入输出" -> "数据的格式化屏幕输出" [fontname="Microsoft YaHei"]
+	"C语言的输入输出" -> "数据的格式化键盘输入" [fontname="Microsoft YaHei"]
+	"指针" -> "指针就是地址！" [fontname="Microsoft YaHei"]
+	"指针" -> "指针和数组" [fontname="Microsoft YaHei"]
+	"指针" -> "指针大小（32位平台4字节，64位平台8字节）" [fontname="Microsoft YaHei"]
+	"指针" -> "指针数组和数组指针" [fontname="Microsoft YaHei"]
+	"别称" -> "ASCII码文件" [fontname="Microsoft YaHei"]
+	"赋值表达式语句" -> "变量=表达式" [fontname="Microsoft YaHei"]
+	"数据的格式化键盘输入" -> "格式符%f与%lf" [fontname="Microsoft YaHei"]
+	"数据的格式化键盘输入" -> "scanf()的格式字符" [fontname="Microsoft YaHei"]
+	"数据的格式化键盘输入" -> "输入数据的格式控制" [fontname="Microsoft YaHei"]
+	"数据的格式化键盘输入" -> "scanf()的格式修饰符" [fontname="Microsoft YaHei"]
+	"根据运算所需的对象" -> "三元（三目）运算符" [fontname="Microsoft YaHei"]
+	"根据运算所需的对象" -> "一元（单目）运算符" [fontname="Microsoft YaHei"]
+	"根据运算所需的对象" -> "二元（双目）运算符" [fontname="Microsoft YaHei"]
+	"定义变量的同时为变量赋值——初始化" -> "类型 变量=表达式" [fontname="Microsoft YaHei"]
+}

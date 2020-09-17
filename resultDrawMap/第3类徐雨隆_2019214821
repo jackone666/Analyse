@@ -1,0 +1,17 @@
+// 导图
+digraph {
+	node [fontname=FANGSONG]
+	edge [arrowhead=empty splines=spline style=dashed]
+	"存储类型 " -> "外部变量extern" [fontname="Microsoft YaHei"]
+	"存储类型 " -> "自动auto" [fontname="Microsoft YaHei"]
+	"存储类型 " -> "静态static" [fontname="Microsoft YaHei"]
+	"数据类型" -> "字符型" [fontname="Microsoft YaHei"]
+	"数据类型" -> "整形" [fontname="Microsoft YaHei"]
+	"数据类型" -> "浮点" [fontname="Microsoft YaHei"]
+	"变量" -> "存储类型 " [fontname="Microsoft YaHei"]
+	"变量" -> "数据类型" [fontname="Microsoft YaHei"]
+	"期中总结" -> "语句" [fontname="Microsoft YaHei"]
+	"期中总结" -> "变量" [fontname="Microsoft YaHei"]
+	"期中总结" -> "函数" [fontname="Microsoft YaHei"]
+	"期中总结" -> "新建节点" [fontname="Microsoft YaHei"]
+}

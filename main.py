@@ -1,0 +1,90 @@
+import xlrd
+import math
+from models import ParseToMatrix
+from models import MaxWith
+from models import LeafNodeNum
+from models import BranchesNum
+from models import SumWith
+from models import EntropyTotal
+from models import NodeLevelNum
+from models import TotalDepthLeaf
+from models import PathRootToNodeTotal
+from models import PathTotalNum
+from models import Hits
+from models import PageRank
+from models import NetDiameter
+import pandas as pd
+
+dataXlsx = xlrd.open_workbook('data/cbj-导图处理结束.xlsx')
+table = dataXlsx.sheet_by_name("Sheet1")
+rowsNum = table.nrows
+ConceptMapQuota = []
+colsStudentName = []  # 存储名字
+rowsQuotaName = ['1节点个数', '2叶子节点个数', '3第二层节点数貌似论文称为分支个数', '4 最大层宽度',
+                 '5 纵向连接个数即等级关系的个数', '6横向连接个数即交叉关系的个数', '7总宽度  树结构每一层的宽度和',
+                 '8平均宽度，总宽度除以树结构的总结点', '9信息熵总和', '10 非叶子节点平均信息熵', ' 11层数', '12最大叶节点深度',
+                 '13叶节点深度总和', '14 根节点到叶节点的路径总条数  等于叶节点个数', '15平均叶子深度', '16路径总深度  即每个节点深度和',
+                 '17路径总条数     根到所有节点路径个数和', '18平均路径深度(16/17)', '19Hub均值--H', '20Authority均值-A',
+                 '21 pr均值', '22 知识存储容量S=H/A', '23网络直径T', '24知识分布性D=log(T*H(1-A)', '25知识检索R=√(S*P)']  # 存储指标名字
+for j in range(17, 18):
+    for i in range(1, rowsNum):
+        colData = table.cell(i, j).value
+        if str(colData).__contains__("root"):
+            colsStudentName.append(table.cell(i, 1).value)
+            tree, level, map = ParseToMatrix.returnMatrix(colData)
+            individualQuota = []
+            nodeNumber = list(map.index).__len__()  # 1节点个数
+            individualQuota.append(nodeNumber)
+            leafNodeNum = LeafNodeNum.leadNodeNum(tree)  # 2叶子节点个数
+            individualQuota.append(leafNodeNum)
+            branchesNum = BranchesNum.branchesNum(level)  # 3第二层节点数  貌似论文称为分支个数
+            individualQuota.append(branchesNum)
+            maxWith = MaxWith.maxWith(level)  # 4 最大层宽度
+            individualQuota.append(maxWith)
+            verticalLinksNum = nodeNumber - 1  # 5 纵向连接个数即等级关系的个数
+            individualQuota.append(verticalLinksNum)
+            transverseLinksNum = list(map.index).__len__() - list(tree.index).__len__()  # 6横向连接个数即交叉关系的个数
+            individualQuota.append(transverseLinksNum)
+            sumWith = SumWith.sumWith(level)  # 7总宽度  树结构每一层的宽度和
+            individualQuota.append(sumWith)
+            averageWith = sumWith / list(tree.index).__len__()  # 8平均宽度，总宽度除以树结构的总结点
+            individualQuota.append(averageWith)
+            entropyTotal = EntropyTotal.entropyTotal(tree)  # 9信息熵总和
+            individualQuota.append(entropyTotal)
+            notLeafAverEntropy = entropyTotal / (list(tree.index).__len__()) - leafNodeNum  # 10 非叶子节点平均信息熵
+            individualQuota.append(notLeafAverEntropy)
+            nodeLevelNum = NodeLevelNum.nodeLevelNum(level)  # 11层数
+            individualQuota.append(nodeLevelNum)
+            maxDepthLeaf = nodeLevelNum  # 12最大叶节点深度
+            individualQuota.append(maxDepthLeaf)
+            totalDepthLeaf = TotalDepthLeaf.totalDepthLeaf(tree, level)  # 13叶节点深度总和
+            individualQuota.append(totalDepthLeaf)
+            rootToLeafNum = leafNodeNum  # 14 根节点到叶节点的路径总条数  等于叶节点个数
+            individualQuota.append(rootToLeafNum)
+            averLeafDepth = totalDepthLeaf / rootToLeafNum  # 15平均叶子深度
+            individualQuota.append(averLeafDepth)
+            pathRootToNodeTotal = PathRootToNodeTotal.pathRootToNodeTotal(level)  # 16路径总深度  即每个节点深度和
+            individualQuota.append(pathRootToNodeTotal)
+            pathTotalNum = PathTotalNum.pathTotalNum(tree)  # 17路径总条数     根到所有节点路径个数和
+            individualQuota.append(pathTotalNum)
+            averPathDepth = pathRootToNodeTotal / pathTotalNum  # 18平均路径深度(16/17)
+            individualQuota.append(averPathDepth)
+            hitsHResult, hitsAResult = Hits.hits(map)  # 19Hub均值--H 20Authority均值
+            individualQuota.append(hitsHResult)
+            individualQuota.append(hitsAResult)
+            pageRank = PageRank.pageRank(map)  # 21 pr均值
+            individualQuota.append(pageRank)
+            knowledgeStorageCapacity = hitsHResult / hitsAResult  # 22 知识存储容量S=H/A
+            individualQuota.append(knowledgeStorageCapacity)
+            netDiameter = NetDiameter.netDiameter(map)  # 23网络直径T
+            individualQuota.append(netDiameter)
+            knowledgeDistribution = math.log2(netDiameter * hitsHResult * (1 - hitsAResult))  # 24知识分布性D=log(T*H(1-A)
+            individualQuota.append(knowledgeDistribution)
+            knowledgeSearch = math.sqrt(knowledgeStorageCapacity * pageRank)  # 25知识检索R=√(S*P)
+            individualQuota.append(knowledgeSearch)
+            ConceptMapQuota.append(individualQuota)  # 将一个人的指标存入n
+            # print(table.cell(0, j).value)
+            print(table.cell(i, 0).value)
+    quotaMat = pd.DataFrame(ConceptMapQuota, colsStudentName, rowsQuotaName)
+    quotaMat.to_excel("期中指标.xlsx", index=True, header=True)
+    # break
