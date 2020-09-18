@@ -14,7 +14,7 @@ from sklearn.manifold import MDS
 import plotly.graph_objects as go
 
 quotaDic = {}
-for i in range(3, 16):
+for i in range(4, 16):
     chapter = "c" + i.__str__()
     chapterJson = readToChapterJson(chapter)
     for j in chapterJson.keys():
@@ -57,7 +57,7 @@ print(labels)
 # plt.show()
 # 平行坐标展示
 # 建立pd数组
-cols = ['color', '平均宽度', '平均叶子深度', '平均路径深度', 'pr均值','D', 'R']
+cols = ['color', '平均宽度', '平均叶子深度', '平均路径深度', 'pr均值','D','R']
 index = list(quotaDic.keys())
 npStructData = np.column_stack((labels, list(quotaDic.values())))
 pdStructData = pd.DataFrame(npStructData, columns=cols, index=index)  # pd结构矩阵构造完成

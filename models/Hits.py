@@ -7,7 +7,6 @@ def hits(map):
     hitsResult = nx.hits(G, max_iter=100000)
     totalH = 0
     totalA = 0
-    print(totalA)
     for i in hitsResult[0].keys():
         totalH = totalH + hitsResult[0].get(i)
         totalA = totalA + hitsResult[1].get(i)

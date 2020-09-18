@@ -47,13 +47,13 @@ def quota(data):
     # individualQuota.append(hitsHResult)
     # individualQuota.append(hitsAResult)
     pageRank = PageRank.pageRank(map)  # 21 pr均值
-    individualQuota.append(1 - pageRank)
+    individualQuota.append(pageRank)
     knowledgeStorageCapacity = hitsHResult / hitsAResult  # 22 知识存储容量S=H/A
     # individualQuota.append(knowledgeStorageCapacity)
     netDiameter = NetDiameter.netDiameter(map)  # 23网络直径T
     # individualQuota.append(netDiameter)
     knowledgeDistribution = math.log(netDiameter * hitsHResult * (1 - hitsAResult))  # 24知识分布性D=log(T*H(1-A)
     individualQuota.append(knowledgeDistribution)
-    knowledgeSearch = math.sqrt(knowledgeStorageCapacity * pageRank)  # 25知识检索R=√(S*P)
+    knowledgeSearch = math.sqrt(knowledgeStorageCapacity * (1-pageRank))  # 25知识检索R=√(S*P)
     individualQuota.append(knowledgeSearch)
     return individualQuota
