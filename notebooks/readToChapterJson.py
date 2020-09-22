@@ -8,12 +8,14 @@ def readToChapterJson(col):
         password="root",
         database="map"
     )
+    nameArra=[]
     cur = con.cursor()
-    sql = "select name ," + col + " from mapjson"
+    sql = "select id ," + col + ",name from mapjson"
     cur.execute(sql)
     result = cur.fetchall()
     for i in result:
         jsondata[str(i[0])]=i[1]
+        nameArra.append(i[2])
     con.close()
     # print(nameMatrix)
-    return jsondata
+    return jsondata,nameArra

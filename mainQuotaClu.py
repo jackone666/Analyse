@@ -14,14 +14,14 @@ from sklearn.manifold import MDS
 import plotly.graph_objects as go
 
 quotaDic = {}
-for i in range(4, 16):
+for i in range(1, 2):
     chapter = "c" + i.__str__()
     chapterJson = readToChapterJson(chapter)
     for j in chapterJson.keys():
         if str(chapterJson.get(j)).__contains__("root"):
             quotaDic[chapter + j] = quota(chapterJson.get(j))
             print(chapter + "________" + j)
-
+print(quotaDic)
 # fig, ax = plt.subplots(1,3,figsize=(15, 5))
 #
 # for idx, neighbor in enumerate([2, 20, 100,200,300,400,500]):
@@ -74,7 +74,7 @@ for i in scaleAxis.keys():
 # print(dimensions)
 fig = go.Figure(data=go.Parcoords(
     line=dict(color=pdStructData['color'],
-              colorscale=[[0, 'green'], [0.5, 'red'], [1.0, 'rgb(0, 0, 255)']]),
+              colorscale=[[0, 'green'], [0.5, 'red'], [1.0, 'blue']]),
     dimensions=dimensions))
 
 fig.update_layout(

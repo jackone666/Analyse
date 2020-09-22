@@ -54,6 +54,6 @@ def quota(data):
     # individualQuota.append(netDiameter)
     knowledgeDistribution = math.log(netDiameter * hitsHResult * (1 - hitsAResult))  # 24知识分布性D=log(T*H(1-A)
     individualQuota.append(knowledgeDistribution)
-    knowledgeSearch = math.sqrt(knowledgeStorageCapacity * (1-pageRank))  # 25知识检索R=√(S*P)
+    knowledgeSearch = math.sqrt(knowledgeStorageCapacity * pageRank)  # 25知识检索R=√(S*P)
     individualQuota.append(knowledgeSearch)
     return individualQuota
