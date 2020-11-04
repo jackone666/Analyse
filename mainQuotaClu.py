@@ -1,26 +1,44 @@
 import matplotlib
-from mpl_toolkits.mplot3d import Axes3D
 from sklearn.cluster import AffinityPropagation
 import pandas as pd
 
+from ReadExpertmap.readexpertmap import readExpertMap
+
 matplotlib.use('TkAgg')  # 大小写无所谓 tkaGg ,TkAgg 都行
-import matplotlib.pyplot as plt
-from models.clu.readToChapterJson import readToChapterJson
 from models.quotaIndividual.quotaIn import quota
-from sklearn.manifold import Isomap  # 降维
-from sklearn.cluster import KMeans
 import numpy as np
-from sklearn.manifold import MDS
 import plotly.graph_objects as go
+import xlrd
+import xlwt
+from notebooks import readToChapterJson
+
+book = xlwt.Workbook(encoding="utf-8")  # 创建工作簿
+sheet = book.add_sheet("sheet")  # 创建工作表格
+dataXlsx = xlrd.open_workbook('../data/z-scoreResult/score.xlsx'
+                              '')
+table = dataXlsx.sheet_by_name("Sheet1")
+rowsNum = table.nrows
+colsNum = table.ncols
 
 quotaDic = {}
-for i in range(1, 2):
+highScore = []
+lowScore = []
+charptIndex = []
+
+nameTotal = []
+for i in range(4, 15):
     chapter = "c" + i.__str__()
-    chapterJson = readToChapterJson(chapter)
+    chapterJson, name = readToChapterJson.readToChapterJson(chapter)
     for j in chapterJson.keys():
         if str(chapterJson.get(j)).__contains__("root"):
-            quotaDic[chapter + j] = quota(chapterJson.get(j))
+            nameTotal.append(name[int(j) - 1])
+            dataTemp = np.array(quota(readExpertMap(i - 4)))  # 零值替换
+            dataTemp[dataTemp == 0] = 1
+            quotaDic[chapter + j] = list(np.divide(np.array(quota(chapterJson.get(j))), dataTemp))
             print(chapter + "________" + j)
+            highScore.append(table.cell(int(j), (i - 2) * 2).value)
+            lowScore.append(table.cell(int(j), (i - 2) * 2 + 1).value)
+            charptIndex.append(i - 1)
 print(quotaDic)
 # fig, ax = plt.subplots(1,3,figsize=(15, 5))
 #
@@ -57,7 +75,7 @@ print(labels)
 # plt.show()
 # 平行坐标展示
 # 建立pd数组
-cols = ['color', '平均宽度', '平均叶子深度', '平均路径深度', 'pr均值','D','R']
+cols = ['color', '节点个数', '纵向连接个数', '总宽度', '路径总条数', '网路直径']
 index = list(quotaDic.keys())
 npStructData = np.column_stack((labels, list(quotaDic.values())))
 pdStructData = pd.DataFrame(npStructData, columns=cols, index=index)  # pd结构矩阵构造完成

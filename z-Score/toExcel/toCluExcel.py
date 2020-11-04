@@ -1,6 +1,9 @@
 import matplotlib
 from sklearn.cluster import AffinityPropagation
 import pandas as pd
+
+from ReadExpertmap.readexpertmap import readExpertMap
+
 matplotlib.use('TkAgg')  # 大小写无所谓 tkaGg ,TkAgg 都行
 from models.quotaIndividual.quotaIn import quota
 import numpy as np
@@ -8,9 +11,11 @@ import plotly.graph_objects as go
 import xlrd
 import xlwt
 from notebooks import readToChapterJson
+
 book = xlwt.Workbook(encoding="utf-8")  # 创建工作簿
 sheet = book.add_sheet("sheet")  # 创建工作表格
-dataXlsx = xlrd.open_workbook('../data/z-scoreResult/z-Score.xlsx')
+dataXlsx = xlrd.open_workbook('../data/z-scoreResult/score.xlsx'
+                              '')
 table = dataXlsx.sheet_by_name("Sheet1")
 rowsNum = table.nrows
 colsNum = table.ncols
@@ -25,7 +30,7 @@ for i in range(3, 15):
     chapterJson, name = readToChapterJson.readToChapterJson(chapter)
     for j in chapterJson.keys():
         if str(chapterJson.get(j)).__contains__("root"):
-            nameTotal.append(name[int(j)-1])
+            nameTotal.append(name[int(j) - 1])
             quotaDic[chapter + j] = quota(chapterJson.get(j))
             print(chapter + "________" + j)
             highScore.append(table.cell(int(j), (i - 2) * 2).value)
@@ -41,7 +46,8 @@ labels = af.labels_
 n_clusters_ = len(cluster_centers_indices)
 print(n_clusters_)
 print(labels)
-cols = ['color', '平均宽度', '平均叶子深度', '平均路径深度', 'pr均值', 'D', 'R']
+cols = ['color', '平均宽度', '平均叶子深度', '平均路径深度','pr均值','D','R']
+
 index = list(quotaDic.keys())
 npStructData = np.column_stack((labels, list(quotaDic.values())))
 pdStructData = pd.DataFrame(npStructData, columns=cols, index=index)  # pd结构矩阵构造完成
@@ -66,9 +72,9 @@ fig.update_layout(
     plot_bgcolor='white',
     paper_bgcolor='white'
 )
-fig.show()
+# fig.show()
 # 给np矩阵扩充列
-CluIndex = ['姓名', 'highScore', 'lowScore', '类别', '平均宽度', '平均叶子深度', '平均路径深度', 'pr均值', 'D', 'R']
+CluIndex = ['姓名', 'highScore', 'lowScore', '类别', '平均宽度', '平均叶子深度', '平均路径深度','pr均值','D','R']
 merge1 = np.column_stack((lowScore, npStructData))
 merge2 = np.column_stack((highScore, merge1))
 merge3 = np.column_stack((nameTotal, merge2))

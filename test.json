@@ -1,0 +1,252 @@
+{
+  "root": {
+    "connectText": "",
+    "text": "C语言的循环控制",
+    "attachments": [],
+    "id": "6d920693-88b0-44f4-85c0-14188f27e644",
+    "children": [
+      {
+        "style": {
+          "connectType": "arrow"
+        },
+        "offset": {
+          "x": 200.58499999999998,
+          "y": 28.131000000000014
+        },
+        "connectText": "使用",
+        "text": "控制方法",
+        "attachments": [],
+        "id": "00321d9e-1aaf-4845-8fb6-73681a00691f",
+        "children": [
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "connectText": "包括",
+            "text": "条件控制的循环",
+            "attachments": [],
+            "id": "b0f6cbcb-1afa-4274-b238-70b4cb3920a8",
+            "children": [],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "connectText": "包括",
+            "text": "计数控制的循环",
+            "attachments": [],
+            "id": "33ecf547-f5da-4ee1-86ea-54a92a2ec847",
+            "children": [],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "connectText": "包括",
+            "text": "标记控制的循环",
+            "attachments": [],
+            "id": "627449e2-ccf7-4cb1-be96-ae1f790a035b",
+            "children": [],
+            "expand": "expand"
+          }
+        ],
+        "expand": "expand"
+      },
+      {
+        "style": {
+          "connectType": "arrow"
+        },
+        "offset": {
+          "x": -65,
+          "y": 185
+        },
+        "connectText": "使用",
+        "text": "循环语句",
+        "attachments": [],
+        "id": "f3e91405-c2fb-4136-b130-68909462cad1",
+        "children": [
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "connectText": "包括",
+            "text": "for语句",
+            "attachments": [],
+            "id": "e07244ff-8714-405d-81a1-c43b9a78aa75",
+            "children": [
+              {
+                "style": {
+                  "backgroundColor": "rgba(184,233,134,1)",
+                  "connectType": "arrow"
+                },
+                "offset": {
+                  "x": -87,
+                  "y": 16
+                },
+                "connectText": "例子",
+                "text": "for(表达式1;表达式2;表达式3）\n{\n语句1\n语句2\n}",
+                "attachments":[],
+                "id":"cff924a9-b3f4-4f90-8c88-e07f37949bc6",
+                "children":[],
+                "expand":"expand"}],
+            "expand":"expand"},
+          {"style":{"connectType":"arrow"},
+            "offset":{"x":-42,
+              "y":7},
+            "connectText":"包括",
+            "text":"while语句",
+            "attachments":[],
+            "id":"cd9ef104-09ad-4265-be28-8896b72e12db",
+            "children":[{"style":{"backgroundColor":"rgba(184,233,134,1)",
+              "connectType":"arrow"},
+              "offset":{"x":-48,"y":99},
+              "connectText":"例子",
+              "text":"表达式1;while(表达式2）{语句1语句2表达式3；},",
+             "attachments"
+              :
+              [],
+              "id"
+              :
+              "b8563783-3865-4614-8d59-e2e3d4d14d42",
+              "children"
+              :
+              [],
+              "expand"
+              :
+              "expand"
+              }
+            ],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "offset": {
+              "x": 21,
+              "y": 12
+            },
+            "connectText": "包括",
+            "text": "do-while语句",
+            "attachments": [],
+            "id": "d04b3ee9-183a-459a-912d-5376e9f584e3",
+            "children": [
+              {
+                "style": {
+                  "backgroundColor": "rgba(184,233,134,1)",
+                  "connectType": "arrow"
+                },
+                "offset": {
+                  "x": 64,
+                  "y": 113
+                },
+                "connectText": "例子",
+                "text": "表达式1；\ndo{\n语句1\n语句2\n表达式3；\n}while(表达式2）；",
+                "attachments": [],
+                "id": "7399c607-b8df-4fd5-81fc-9b27e10080b1",
+                "children": [],
+                "expand": "expand"
+              }
+            ],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "connectText": "包括",
+            "text": "嵌套循环",
+            "attachments": [],
+            "id": "3028bdd9-85a9-410d-b0d8-02b66fc6ceff",
+            "children": [],
+            "expand": "expand"
+          }
+        ],
+        "expand": "expand"
+      },
+      {
+        "style": {
+          "connectType": "arrow"
+        },
+        "offset": {
+          "x": -310.5,
+          "y": 2.3999999999999986
+        },
+        "connectText": "包括",
+        "text": "转移控制语句",
+        "attachments": [],
+        "id": "e0694948-1d3e-4728-b284-46285fb0b8b9",
+        "children": [
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "offset": {
+              "x": 24,
+              "y": -5
+            },
+            "connectText": "包括",
+            "text": "break语句",
+            "attachments": [],
+            "id": "58dd2a1b-3c24-4e5f-a49b-0161a2f9aa3b",
+            "children": [],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "offset": {
+              "x": 32,
+              "y": -5
+            },
+            "connectText": "包括",
+            "text": "continue语句",
+            "attachments": [],
+            "id": "d7ceaaa2-7347-4bbe-b7a0-2e1994380001",
+            "children": [],
+            "expand": "expand"
+          },
+          {
+            "style": {
+              "connectType": "arrow"
+            },
+            "offset": {
+              "x": 25,
+              "y": -5
+            },
+            "connectText": "包括",
+            "text": "goto语句",
+            "attachments": [],
+            "id": "6a30208b-0a2d-40a5-80c5-14da5aa149d2",
+            "children": [],
+            "expand": "expand"
+          }
+        ],
+        "expand": "expand"
+      }
+    ],
+    "expand": "expand"
+  },
+  "links": [],
+  "summaries": [
+    {
+      "offset": {
+        "x": -431,
+        "y": 92
+      },
+      "connectText": "",
+      "text": "while为“当型循环”，do-while为直到型循环",
+      "attachments": [],
+      "id": "31e8474f-54c8-4864-b685-a783283baa69",
+      "trees": [
+        "cd9ef104-09ad-4265-be28-8896b72e12db",
+        "d04b3ee9-183a-459a-912d-5376e9f584e3"
+      ]
+    }
+  ],
+  "theme": "round loose multicolor concept",
+  "version": "2.1.0"
+}
